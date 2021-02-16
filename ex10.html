@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script type="text/javascript">
+    var Computer = {
+      "component1" : "CPU",
+      "component2" : "메인보드",
+      "component3" : "그래픽카드",
+      "component4" : "램",
+      "component5" : "SSD"
+    };
+    document.write("<div>component1 : "+Computer.component1+"</div>");
+    document.write("<div>component2 : "+Computer.component2+"</div>");
+    document.write("<div>component3 : "+Computer.component3+"</div>");
+    document.write("<div>component4 : "+Computer.component4+"</div>");
+    document.write("<div>component5 : "+Computer.component5+"</div>");
+    Computer.component6 = '쿨러';
+    Computer.component6 = '케이스';
+    document.write("<div>component6 : "+Computer.component6+"</div>");
+    document.write("<div>component7 : "+Computer.component7+"</div>");
+    </script>
+    <h2>Iterate</h2>
+    <script type="text/javascript">
+      for (var key in Computer) {
+        document.write('<div>' + key + ' : ' + Computer[key] + '</div>');
+      }
+    </script>
+    <h2>Object Property & Method</h2>
+    <script type="text/javascript">
+      Computer.ShowAll = function() {
+        for (var key in Computer) {
+          if (key != "ShowAll") {
+            document.write('<div>' + key + ' : ' + Computer[key] + '</div>');
+          }
+        }
+      }
+      Computer.ShowAll();
+    </script>
+  </body>
+</html>
